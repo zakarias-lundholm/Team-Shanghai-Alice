@@ -1,7 +1,8 @@
 .cssgrid {
     display: grid;
-    grid-template-columns: 6fr 10fr 2fr 10fr 6fr;
-    grid-template-rows: 5fr 2fr 10fr 1fr 10fr 1fr 5fr;
+    margin: 0;
+    grid-template-columns: 5fr 12fr 2fr 12fr 5fr;
+    grid-template-rows: 5fr 2fr 12fr 1fr 12fr 2fr 5fr;
     text-align: center;
     background-color: #3D3737;
     color: #fff7f7;
@@ -12,9 +13,35 @@ header {
     grid-column: 1/6;
     background-color: #2b2828;
 }
+a {
+    display: flex;
+    align-items: center;
+    background-color: #414141;
+    color: #fff7f7;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 1vh; /*Kanske göra konstant så att länkarna i header inte är olika breda*/
+    border: 1vh;
+    border-color: #383838;
+    border-style: solid;
+    margin: 2vh;
+}
+a:hover {
+    background-color: #383838;
+    color: #fff7f7;
+    border-color: #414141;
+}
+h3 {
+    color: #AA2727;
+}
 footer {
+    display: flex;
     grid-row: 7/8;
     grid-column: 1/6;
+    background-color: #2b2828;
+    align-items: center;
 }
 .headflex {
     display: flex;
@@ -43,7 +70,7 @@ footer {
 }
 .linkflex {
     display: flex;
-    background-color: #504f4f;
+    background-color: #474747;
     color: #fff7f7;
     text-decoration: none;
     justify-content: center;
@@ -54,10 +81,23 @@ footer {
     border-style: solid;
 }
 .linkflex:hover {
-    background-color: #fff7f7;
-    color: #424040;
-    border-color: #504f4f;
+    background-color: #424040;
+    color: #fff7f7;
+    border-color: #474747;
 }
-h3 {
-    color: #AA2727;
+.asideflex {
+    display: flex;
+    grid-row: 2/7;
+    grid-column: 1/2;
+    flex-flow: column;
+    background-color: #424040;
+    margin-right: 2vh;
+    justify-content: space-evenly;
+}
+.flexTH {
+    display: flex;
+    grid-row: 2/7;
+    grid-column: 2/5;
+    flex-flow: column;
+    justify-content: space-evenly;
 }
