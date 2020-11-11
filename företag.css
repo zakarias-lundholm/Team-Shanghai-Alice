@@ -13,7 +13,7 @@ header {
     grid-column: 1/6;
     background-color: #2b2828;
 }
-a {
+header a {
     display: flex;
     align-items: center;
     background-color: #414141;
@@ -28,10 +28,13 @@ a {
     border-style: solid;
     margin: 2vh;
 }
-a:hover {
+header a:hover {
     background-color: #383838;
     color: #fff7f7;
     border-color: #414141;
+}
+h2 {
+    color: #AA2727;
 }
 h3 {
     color: #AA2727;
@@ -56,11 +59,11 @@ footer {
     grid-row: 3/4;
     grid-column: 2/3;
 }
-#linkIF {
-    grid-row: 3/4;
+#linkOG {
+        grid-row: 3/4;
     grid-column: 4/5;
 }
-#linkOG {
+#linkIF {
     grid-row: 5/6;
     grid-column: 2/3;
 }
@@ -94,10 +97,18 @@ footer {
     margin-right: 2vh;
     justify-content: space-evenly;
 }
-.flexTH {
+.flexMain {
     display: flex;
     grid-row: 2/7;
     grid-column: 2/5;
     flex-flow: column;
     justify-content: space-evenly;
+}
+.flexLinks {
+    display: flex;
+    grid-row: 2/7;
+    grid-column: 1/6;
+    margin: 4vh;
+    flex-flow: column;
+    align-items: flex-start;
 }
