@@ -1,114 +1,137 @@
 .cssgrid {
-    display: grid;
-    margin: 0;
-    grid-template-columns: 5fr 12fr 2fr 12fr 5fr;
-    grid-template-rows: 5fr 2fr 12fr 1fr 12fr 2fr 5fr;
-    text-align: center;
-    background-color: #3D3737;
-    color: #fff7f7;
-    font-family: 'Times New Roman', Times, serif;
+  display: grid;
+  margin: 0;
+  grid-template-columns: 5fr 12fr 2fr 12fr 5fr;
+  grid-template-rows: 5fr 2fr 12fr 1fr 12fr 2fr 5fr;
+  text-align: center;
+  background-color: #3d3737;
+  color: #fff7f7;
+  font-family: "Times New Roman", Times, serif;
 }
 header {
-    grid-row: 1/2;
-    grid-column: 1/6;
-    background-color: #2b2828;
+  grid-row: 1/2;
+  grid-column: 1/6;
+  background-color: #2b2828;
+  z-index: 1; /*Onödigt för nu, men behövdes i footer p.g.a .asideflex*/
 }
 header a {
-    display: flex;
-    align-items: center;
-    background-color: #414141;
-    color: #fff7f7;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    padding: 1vh; /*Kanske göra konstant så att länkarna i header inte är olika breda*/
-    border: 1vh;
-    border-color: #383838;
-    border-style: solid;
-    margin: 2vh;
+  display: flex;
+  align-items: center;
+  background-color: #414141;
+  color: #fff7f7;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 1vh; /*Kanske göra konstant så att länkarna i header inte är olika breda*/
+  border: 1vh;
+  border-color: #383838;
+  border-style: solid;
+  margin: 2vh;
 }
 header a:hover {
-    background-color: #383838;
-    color: #fff7f7;
-    border-color: #414141;
+  background-color: #383838;
+  color: #fff7f7;
+  border-color: #414141;
 }
 h2 {
-    color: #AA2727;
+  color: #aa2727;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 h3 {
-    color: #AA2727;
+  color: #aa2727;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h4 {
+  color: #aa2727;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+a h4 {
+  margin: 0;
 }
 footer {
-    display: flex;
-    grid-row: 7/8;
-    grid-column: 1/6;
-    background-color: #2b2828;
-    align-items: center;
+  display: flex;
+  grid-row: 7/8;
+  grid-column: 1/6;
+  background-color: #2b2828;
+  align-items: center;
+  z-index: 1;
 }
 .headflex {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .navflex {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
 }
 #linkTH {
-    grid-row: 3/4;
-    grid-column: 2/3;
+  grid-row: 3/4;
+  grid-column: 2/3;
 }
 #linkOG {
-        grid-row: 3/4;
-    grid-column: 4/5;
+  grid-row: 3/4;
+  grid-column: 4/5;
 }
 #linkIF {
-    grid-row: 5/6;
-    grid-column: 2/3;
+  grid-row: 5/6;
+  grid-column: 2/3;
 }
 #linkLN {
-    grid-row: 5/6;
-    grid-column: 4/5;
+  grid-row: 5/6;
+  grid-column: 4/5;
 }
 .linkflex {
-    display: flex;
-    background-color: #474747;
-    color: #fff7f7;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    border: 3vh;
-    border-color: #424040;
-    border-style: solid;
+  display: flex;
+  background-color: #474747;
+  color: #fff7f7;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border: 3vh;
+  border-color: #424040;
+  border-style: solid;
 }
 .linkflex:hover {
-    background-color: #424040;
-    color: #fff7f7;
-    border-color: #474747;
+  background-color: #424040;
+  color: #fff7f7;
+  border-color: #474747;
 }
 .asideflex {
-    display: flex;
-    grid-row: 2/7;
-    grid-column: 1/2;
-    flex-flow: column;
-    background-color: #424040;
-    margin-right: 2vh;
-    justify-content: space-evenly;
+  display: flex;
+  grid-row: 2/7;
+  grid-column: 1/2;
+  height: 100vh;
+  flex-flow: column;
+  background-color: #424040;
+  margin-right: 2vh;
+  justify-content: flex-start;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 .flexMain {
-    display: flex;
-    grid-row: 2/7;
-    grid-column: 2/5;
-    flex-flow: column;
-    justify-content: space-evenly;
+  display: flex;
+  grid-row: 2/7;
+  grid-column: 2/5;
+  flex-flow: column;
+  justify-content: space-evenly;
 }
 .flexLinks {
-    display: flex;
-    grid-row: 2/7;
-    grid-column: 1/6;
-    margin: 4vh;
-    flex-flow: column;
-    align-items: flex-start;
+  display: flex;
+  grid-row: 2/7;
+  grid-column: 1/6;
+  margin: 4vh;
+  flex-flow: column;
+  align-items: flex-start;
+}
+a {
+  text-decoration: underline;
+  color: #fff7f7;
+  margin: 2vh;
 }
