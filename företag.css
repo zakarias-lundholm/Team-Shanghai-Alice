@@ -1,8 +1,8 @@
 .cssgrid {
   display: grid;
   margin: 0;
-  grid-template-columns: 5fr 12fr 2fr 12fr 5fr;
-  grid-template-rows: 5fr 2fr 12fr 1fr 12fr 2fr 5fr;
+  grid-template-columns: 5fr 12fr 1fr 12fr 5fr;
+  grid-template-rows: 13vmax 2vmax 25vmax auto 25vmax 2vmax 8vmax; /*använde tidigare fr, men det gjorde att headerns storlek varierade, specifikt i touhou.html*/
   text-align: center;
   background-color: #3d3737;
   color: #fff7f7;
@@ -12,7 +12,7 @@ header {
   grid-row: 1/2;
   grid-column: 1/6;
   background-color: #2b2828;
-  z-index: 1; /*Onödigt för nu, men behövdes i footer p.g.a .asideflex*/
+  z-index: 1; /*Onödigt för nu, men behövdes i footer p.g.a .asideflex, så den är där för säkerhets skull*/
 }
 header a {
   display: flex;
@@ -43,11 +43,16 @@ h3 {
   color: #aa2727;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 4%;
 }
 h4 {
   color: #aa2727;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 2%;
+}
+.asideflex h4 {
+  margin: 10%;
 }
 a h4 {
   margin: 0;
@@ -64,20 +69,25 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.navflex {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
+.navgrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr;
+  grid-template-rows: 1fr;
 }
-#linkTH {
+#linkIF {
   grid-row: 3/4;
   grid-column: 2/3;
 }
-#linkOG {
+#linkTH {
   grid-row: 3/4;
   grid-column: 4/5;
 }
-#linkIF {
+#linkTH p{
+  font-size: 4vmax;
+  color: #fff7f7;
+  margin: 0%;
+}
+#linkOG {
   grid-row: 5/6;
   grid-column: 2/3;
 }
@@ -120,7 +130,6 @@ footer {
   grid-row: 2/7;
   grid-column: 2/5;
   flex-flow: column;
-  justify-content: space-evenly;
 }
 .flexLinks {
   display: flex;
@@ -134,4 +143,11 @@ a {
   text-decoration: underline;
   color: #fff7f7;
   margin: 2vh;
+}
+a:hover {
+  color: #aa2727;
+}
+.sublink {
+  font-size: 0.8rem;
+  text-align: left;
 }
