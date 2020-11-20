@@ -50,6 +50,7 @@ h4 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 2%;
+  text-align: left;
 }
 .asideflex h4 {
   margin: 10%;
@@ -65,6 +66,12 @@ footer {
   align-items: center;
   z-index: 1;
 }
+img {
+  margin: 1vmax;
+}
+header img {
+  margin: 0;
+}
 .headflex {
   display: flex;
   justify-content: space-between;
@@ -78,13 +85,18 @@ footer {
   grid-row: 3/4;
   grid-column: 2/3;
 }
+#linkIF p {
+  font-size: 6vmax;
+  color: #ffffff;
+  margin: 0%;
+}
 #linkTH {
   grid-row: 3/4;
   grid-column: 4/5;
 }
-#linkTH p{
+#linkTH p {
   font-size: 4vmax;
-  color: #fff7f7;
+  color: #ffffff;
   margin: 0%;
 }
 #linkOG {
@@ -151,3 +163,15 @@ a:hover {
   font-size: 0.8rem;
   text-align: left;
 }
+article p {
+  text-align: left;
+}
+.p-img {
+  display: flex;
+  flex-flow: row;
+}
+.p-img-reverse {
+  display: flex;
+  flex-flow: row-reverse;
+}
+
